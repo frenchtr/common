@@ -1,11 +1,11 @@
 {
     "package": {
-        "name":"unity-package-template",
-        "displayName": "Unity Package Template",
+        "name":"common",
+        "displayName": "Common",
         "version": "0.0.0",
         "unityVersion": "",
-        "description": "A template for creating Unity packages.",
-        "url": "https://github.com/frenchtr/unity-package-template"
+        "description": "A library of common helpers to make my life easier when working on Unity projects.",
+        "url": "https://github.com/frenchtr/common"
     },
 
     "organization": {

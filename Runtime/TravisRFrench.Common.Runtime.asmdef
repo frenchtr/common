@@ -1,6 +1,6 @@
 {
-    "name": "TravisRFrench.UnityPackageTemplate.Runtime",
-    "rootNamespace": "TravisRFrench.UnityPackageTemplate.Runtime",
+    "name": "TravisRFrench.Common.Runtime",
+    "rootNamespace": "TravisRFrench.Common.Runtime",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
