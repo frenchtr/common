@@ -1,4 +1,13 @@
 {
     "name": "com.travisrfrench.common",
-    "version": "0.0.0"
-}
+    "displayName": "Common",
+    "version": "0.0.0",
+    "description": "A library of common helpers to make my life easier when working on Unity projects.",
+    "author": {
+      "name": "Travis R. French"
+    },
+    "homepage": "https://github.com/frenchtr/common",
+    "dependencies": {
+    },
+    "license": "See <LICENSE.md>"
+  }
