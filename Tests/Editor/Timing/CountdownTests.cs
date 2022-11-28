@@ -5,7 +5,7 @@ namespace TravisRFrench.Common.Tests.Editor.Timing
 {
     [TestFixture]
     [Category(EditorTestCategories.UnitTests)]
-    public class CountdownTests : IntervalCounterTests
+    public class CountdownTests : EllapsableTests
     {
         [Test]
         public void GivenNewCountdown_WhenConstructed_TimeShouldBeSetToDuration()

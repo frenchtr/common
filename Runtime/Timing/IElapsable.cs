@@ -1,6 +1,6 @@
 ﻿namespace TravisRFrench.Common.Runtime.Timing
 {
-    public interface IIntervalCounter<out TTimer> :
+    public interface IElapsable<out TTimer> :
         ITimer, 
         IStartable<TTimer>, 
         IStoppable<TTimer>, 

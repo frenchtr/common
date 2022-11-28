@@ -3,7 +3,7 @@ using TravisRFrench.Common.Runtime.Timing;
 
 namespace TravisRFrench.Common.Tests.Editor.Timing
 {
-    public class IntervalTests : IntervalCounterTests
+    public class IntervalTests : EllapsableTests
     {
         [Test]
         public void GivenNewInterval_WhenResetIsInvoked_ItShouldSetTimeToZero()

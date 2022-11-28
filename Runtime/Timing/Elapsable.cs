@@ -4,20 +4,20 @@ using UnityEngine;
 namespace TravisRFrench.Common.Runtime.Timing
 {
     [Serializable]
-    public abstract class IntervalCounter<TTimer> : Timer, IIntervalCounter<TTimer>
-        where TTimer : class, IIntervalCounter<TTimer>
+    public abstract class Elapsable<TTimer> : Timer, IElapsable<TTimer>
+        where TTimer : class, IElapsable<TTimer>
     {
         [field: SerializeField]
         public float Time { get; protected set; }
         [field: SerializeField]
         public float Duration { get; protected set; }
 
-        protected IntervalCounter(float duration)
+        protected Elapsable(float duration)
         {
             this.Duration = duration;
         }
 
-        protected IntervalCounter()
+        protected Elapsable()
         {
         }
 

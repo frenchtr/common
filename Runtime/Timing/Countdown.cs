@@ -4,7 +4,7 @@ using UnityEngine;
 namespace TravisRFrench.Common.Runtime.Timing
 {
     [Serializable]
-    public class Countdown : IntervalCounter<ICountdown>, ICountdown
+    public class Countdown : Elapsable<ICountdown>, ICountdown
     {
         public Countdown(float duration) : base(duration)
         {

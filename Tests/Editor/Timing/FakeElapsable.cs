@@ -3,9 +3,9 @@ using TravisRFrench.Common.Runtime.Timing;
 
 namespace TravisRFrench.Common.Tests.Editor.Timing
 {
-    public class FakeIntervalCounter : IntervalCounter<FakeIntervalCounter>
+    public class FakeElapsable : Elapsable<FakeElapsable>
     {
-        public FakeIntervalCounter(float duration) : base(duration)
+        public FakeElapsable(float duration) : base(duration)
         {
         }
 
