@@ -1,5 +1,8 @@
-﻿namespace TravisRFrench.Common.Runtime.Timing
+﻿using System;
+
+namespace TravisRFrench.Common.Runtime.Timing
 {
+    [Serializable]
     public abstract class Timer : ITimer
     {
         public virtual bool IsRunning { get; protected set; }

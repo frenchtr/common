@@ -34,7 +34,7 @@ namespace TravisRFrench.Common.Tests.Editor.Timing
         }
         
         [Test]
-        public void GivenNewStopwatch_WhenReset_ItShouldNotBeRunning()
+        public void GivenRunningStopwatch_WhenReset_ItShouldNotBeRunning()
         {
             // ARRANGE
             var stopwatch = new Stopwatch();

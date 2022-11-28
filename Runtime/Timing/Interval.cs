@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace TravisRFrench.Common.Runtime.Timing
 {
+    [Serializable]
     public class Interval : IntervalCounter<IInterval>, IInterval
     {
         public Interval(float duration) : base(duration)

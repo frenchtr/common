@@ -1,16 +1,24 @@
 ﻿using System;
+using UnityEngine;
 
 namespace TravisRFrench.Common.Runtime.Timing
 {
+    [Serializable]
     public abstract class IntervalCounter<TTimer> : Timer, IIntervalCounter<TTimer>
         where TTimer : class, IIntervalCounter<TTimer>
     {
+        [field: SerializeField]
         public float Time { get; protected set; }
-        public float Duration { get; }
-        
-        public IntervalCounter(float duration)
+        [field: SerializeField]
+        public float Duration { get; protected set; }
+
+        protected IntervalCounter(float duration)
         {
             this.Duration = duration;
+        }
+
+        protected IntervalCounter()
+        {
         }
 
         public virtual event Action<TTimer> Started;

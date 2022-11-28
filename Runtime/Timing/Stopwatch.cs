@@ -1,9 +1,12 @@
 ﻿using System;
+using UnityEngine;
 
 namespace TravisRFrench.Common.Runtime.Timing
 {
+    [Serializable]
     public class Stopwatch : Timer, IStopwatch
     {
+        [field: SerializeField]
         public float Time { get; private set; }
         
         public event Action<IStopwatch> Started;
