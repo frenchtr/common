@@ -15,18 +15,25 @@ namespace TravisRFrench.Common.Runtime.Timing
         {
             this.Time = this.Duration;
         }
+        
+        public override event Action<ICountdown> Elapsed;
 
         public override void Tick(float deltaTime)
         {
             if (this.IsRunning)
             {
-                this.Time = Mathf.Clamp(this.Time - deltaTime, 0f, this.Duration);                
+                if (this.Time <= 0f)
+                {
+                    this.Time = 0f;
+                    this.HasElapsed = true;
+                    this.Elapsed?.Invoke(this);
+                    this.Stop();
+                }
+                else
+                {
+                    this.Time = Mathf.Clamp(this.Time - deltaTime, 0f, this.Duration);
+                }
             }
-        }
-
-        public override void Start()
-        {
-            base.Start();
         }
 
         public override void Reset()

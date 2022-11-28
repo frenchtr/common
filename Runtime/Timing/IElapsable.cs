@@ -1,4 +1,6 @@
-﻿namespace TravisRFrench.Common.Runtime.Timing
+﻿using System;
+
+namespace TravisRFrench.Common.Runtime.Timing
 {
     public interface IElapsable<out TTimer> :
         ITimer, 
@@ -9,5 +11,8 @@
         IHasTime,
         IHasDuration
     {
+        bool HasElapsed { get; }
+
+        event Action<TTimer> Elapsed;
     }
 }

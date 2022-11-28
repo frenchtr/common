@@ -13,5 +13,7 @@ namespace TravisRFrench.Common.Tests.Editor.Timing
         {
             throw new NotImplementedException();
         }
+
+        public override event Action<FakeElapsable> Elapsed;
     }
 }

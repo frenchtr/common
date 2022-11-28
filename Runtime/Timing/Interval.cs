@@ -9,12 +9,24 @@ namespace TravisRFrench.Common.Runtime.Timing
         public Interval(float duration) : base(duration)
         {
         }
+        
+        public override event Action<IInterval> Elapsed;
 
         public override void Tick(float deltaTime)
         {
             if (this.IsRunning)
             {
-                this.Time = Mathf.Clamp(this.Time + deltaTime, 0f, this.Duration);                
+                if (this.Time >= this.Duration)
+                {
+                    this.Time = this.Duration;
+                    this.HasElapsed = true;
+                    this.Elapsed?.Invoke(this);
+                    this.Stop();
+                }
+                else
+                {
+                    this.Time = Mathf.Clamp(this.Time + deltaTime, 0f, this.Duration); 
+                }
             }
         }
 

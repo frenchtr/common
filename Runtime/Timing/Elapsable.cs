@@ -11,6 +11,7 @@ namespace TravisRFrench.Common.Runtime.Timing
         public float Time { get; protected set; }
         [field: SerializeField]
         public float Duration { get; protected set; }
+        public bool HasElapsed { get; protected set; }
 
         protected Elapsable(float duration)
         {
@@ -24,6 +25,7 @@ namespace TravisRFrench.Common.Runtime.Timing
         public virtual event Action<TTimer> Started;
         public virtual event Action<TTimer> Stopped;
         public virtual event Action<TTimer> Resetted;
+        public abstract event Action<TTimer> Elapsed;
         
         public virtual void Start()
         {
@@ -40,6 +42,7 @@ namespace TravisRFrench.Common.Runtime.Timing
         public virtual void Reset()
         {
             this.IsRunning = false;
+            this.HasElapsed = false;
             this.Resetted?.Invoke(this as TTimer);
         }
     }
