@@ -28,6 +28,7 @@ namespace TravisRFrench.Common.Runtime.Timing
         public void Reset()
         {
             this.Time = 0f;
+            this.IsRunning = false;
             this.Resetted?.Invoke(this);
         }
 

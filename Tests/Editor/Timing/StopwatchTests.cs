@@ -38,6 +38,7 @@ namespace TravisRFrench.Common.Tests.Editor.Timing
         {
             // ARRANGE
             var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
             // ACT
             stopwatch.Reset();
