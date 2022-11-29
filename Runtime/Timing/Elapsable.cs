@@ -10,7 +10,7 @@ namespace TravisRFrench.Common.Runtime.Timing
         [field: SerializeField]
         public float Time { get; protected set; }
         [field: SerializeField]
-        public float Duration { get; protected set; }
+        public float Duration { get; set; }
         public bool HasElapsed { get; protected set; }
 
         protected Elapsable(float duration)
