@@ -9,6 +9,10 @@ namespace TravisRFrench.Common.Runtime.Timing
         public Interval(float duration) : base(duration)
         {
         }
+
+        public Interval()
+        {
+        }
         
         public override event Action<IInterval> Elapsed;
 
