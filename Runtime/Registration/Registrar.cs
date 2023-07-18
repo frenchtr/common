@@ -13,7 +13,7 @@ namespace TravisRFrench.Common.Runtime.Registration
             this.Entities = new List<TEntity>();
         }
         
-        public void Register(TEntity entity)
+        public virtual void Register(TEntity entity)
         {
             if (entity == null)
             {
@@ -28,7 +28,7 @@ namespace TravisRFrench.Common.Runtime.Registration
             this.Entities.Add(entity);
         }
 
-        public void Deregister(TEntity entity)
+        public virtual void Deregister(TEntity entity)
         {
             if (entity == null)
             {
