@@ -8,7 +8,7 @@ namespace TravisRFrench.Common.Runtime.Registration
     {
         private Registrar<TEntity> registrar;
         
-        public IEnumerable<TEntity> Entities => this.registrar.Entities;
+        public IEnumerable<TEntity> Entities => ((IRegistrar<TEntity>)this.registrar).Entities;
 
         public event Action<TEntity> Registered
         {
