@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace TravisRFrench.Common.Runtime.Registration
