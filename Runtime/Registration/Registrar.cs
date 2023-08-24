@@ -12,6 +12,9 @@ namespace TravisRFrench.Common.Runtime.Registration
         {
             this.Entities = new List<TEntity>();
         }
+
+        public event Action<TEntity> Registered;
+        public event Action<TEntity> Deregistered;
         
         public virtual void Register(TEntity entity)
         {
@@ -26,6 +29,7 @@ namespace TravisRFrench.Common.Runtime.Registration
             }
             
             this.Entities.Add(entity);
+            this.Registered?.Invoke(entity);
         }
 
         public virtual void Deregister(TEntity entity)
@@ -41,6 +45,7 @@ namespace TravisRFrench.Common.Runtime.Registration
             }
             
             this.Entities.Remove(entity);
+            this.Deregistered?.Invoke(entity);
         }
     }
 }
