@@ -1,7 +1,10 @@
 {
     "name": "TravisRFrench.Common.Runtime",
     "rootNamespace": "TravisRFrench.Common.Runtime",
-    "references": [],
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:f06555f75b070af458a003d92f9efb00"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
