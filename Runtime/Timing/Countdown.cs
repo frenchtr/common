@@ -26,8 +26,8 @@ namespace TravisRFrench.Common.Runtime.Timing
                 {
                     this.Time = 0f;
                     this.HasElapsed = true;
-                    this.Elapsed?.Invoke(this);
                     this.Stop();
+                    this.Elapsed?.Invoke(this);
                 }
                 else
                 {
