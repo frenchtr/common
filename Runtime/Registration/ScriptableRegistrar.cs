@@ -7,7 +7,6 @@ namespace TravisRFrench.Common.Runtime.Registration
     public abstract class ScriptableRegistrar<TEntity> : ScriptableObject, IRegistrar<TEntity>
     {
         private Registrar<TEntity> registrar;
-        private bool isSetup;
         
         public IEnumerable<TEntity> Entities => ((IRegistrar<TEntity>)this.registrar).Entities;
 
@@ -24,14 +23,7 @@ namespace TravisRFrench.Common.Runtime.Registration
 
         public void Setup()
         {
-            if (this.isSetup)
-            {
-                return;
-            }
-
             this.registrar = new Registrar<TEntity>();
-
-            this.isSetup = true;
         }
 
         public virtual void Register(TEntity entity) => this.registrar.Register(entity);
