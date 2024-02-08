@@ -30,6 +30,8 @@ namespace TravisRFrench.Common.Runtime.Registration
             }
 
             this.registrar = new Registrar<TEntity>();
+
+            this.isSetup = true;
         }
 
         public virtual void Register(TEntity entity) => this.registrar.Register(entity);
