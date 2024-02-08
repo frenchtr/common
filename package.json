@@ -1,7 +1,7 @@
 {
     "name": "com.travisrfrench.common",
     "displayName": "Common",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "description": "A library of common helpers to make my life easier when working on Unity projects.",
     "author": {
       "name": "Travis R. French"

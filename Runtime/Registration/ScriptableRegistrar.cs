@@ -21,7 +21,12 @@ namespace TravisRFrench.Common.Runtime.Registration
             remove => this.registrar.Deregistered -= value;
         }
 
-        public void Register(TEntity entity) => this.registrar.Register(entity);
-        public void Deregister(TEntity entity) => this.registrar.Deregister(entity);
+        private void Awake()
+        {
+            this.registrar = new Registrar<TEntity>();
+        }
+
+        public virtual void Register(TEntity entity) => this.registrar.Register(entity);
+        public virtual void Deregister(TEntity entity) => this.registrar.Deregister(entity);
     }
 }
